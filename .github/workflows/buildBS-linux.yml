@@ -2,8 +2,8 @@ name: Electron CD Linux
 
 on:
   push:
-    tags:
-      '*'
+    branch:
+      'pdf-test'
 
 jobs:
   build:
