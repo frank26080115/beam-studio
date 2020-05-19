@@ -2,8 +2,8 @@ name: Electron CD Mac
 
 on:
   push:
-    branch:
-      'pdf-test'
+    tag:
+      '*'
 
 jobs:
   build:
