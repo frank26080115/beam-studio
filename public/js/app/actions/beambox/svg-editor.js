@@ -6319,11 +6319,6 @@ define([
                         case 'pdf':
                         case 'ai':
                             PdfHelper.pdf2svg(file);
-                            Alert.popUp({
-                                id: 'import_ai',
-                                message: LANG.svg_editor.unnsupport_ai_file_directly,
-                                type: AlertConstants.SHOW_POPUP_WARNING,
-                            });
                             break;
                         case 'js':
                             importJsScript(file);

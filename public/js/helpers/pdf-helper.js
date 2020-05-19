@@ -18,7 +18,7 @@ define([
     const child_process = require('child_process');
     const exec = util.promisify(child_process.exec);
     const execFile = util.promisify(child_process.execFile);
-    const resourcesRoot = (true || process.defaultApp) ? process.cwd() : process.resourcesPath;
+    const resourcesRoot = process.defaultApp ? process.cwd() : process.resourcesPath;
     const lang = i18n.lang.beambox.popup.pdf2svg;
     let pdf2svgPath = null;
     if (process.platform === 'darwin') {
