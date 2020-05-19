@@ -26,10 +26,9 @@ define([
     } else if (process.platform === 'win32') {
         pdf2svgPath = path.join(resourcesRoot, 'utils', 'pdf2svg', 'pdf2svg.exe');
     }
-    const outPath = path.join(resourcesRoot, 'utils', 'pdf2svg', 'out.svg');
 
     const pdf2svg = async (file) => {
-        console.log(file);
+        const outPath = path.join(resourcesRoot, 'utils', 'pdf2svg', 'out.svg');
         if (pdf2svgPath) {
             //mac or windows, using packed binary executable
             try {
@@ -54,6 +53,7 @@ define([
             }
         } else {
             //Linux 
+            const outPath = path.join(resourcesRoot, 'out.svg');
             try {
                 await exec('type pdf2svg');
             } catch(e) {
